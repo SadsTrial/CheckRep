@@ -1,0 +1,11 @@
+= Medrium Clinical QA
+Now using Maven to build.
+Findbugs and Surefire report is integrated and run with mvn test.
+
+== Phases
+One that know of right now
+To target BillingCenter you must add -P billingcenter to use billing profile definition
+
+clean - Delete target class
+compile - generate class in target folder
+surefire-report:report - Run selenium test on host provided in testng.xml and create a site page in target/site

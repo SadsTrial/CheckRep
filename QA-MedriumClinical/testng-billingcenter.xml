@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Medrium Selenium Automated QA Test" thread-count="30" parallel="methods">
+  <parameter name="billingCenterURL" value="http://medrium.billingcenter.medrium.com:9090/xml/billingserviceuser" />
+  <test name="CompleteTest" junit="false" annotations="JDK">
+  <packages>
+    <package name="com.billingcenter.unittest"></package>
+  </packages>
+  </test>
+</suite>

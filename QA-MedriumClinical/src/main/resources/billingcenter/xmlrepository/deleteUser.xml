@@ -1,0 +1,22 @@
+<Request>
+  <UserID>DAWNG@MEDRIUM.BPO</UserID>
+  <Password>gri123</Password>
+  <Method>delete</Method>
+  <Params>
+    <user>
+     <askpasswordonnextlogon>N</askpasswordonnextlogon>
+	  <billingID>20</billingID>
+	  <email>bob@bob.com</email>
+	  <firstname>test</firstname>
+	  <lastname>test1</lastname>
+	  <lastupdated>12/12/2012</lastupdated>
+	  <password>a1b2c3</password>
+	  <telNum>2222222222</telNum>
+	  <types>1</types>
+	  <updatedby>DAWNG</updatedby>
+	  <userID>SAMMY</userID>
+      <usergroup>4</usergroup>
+    </user>
+    <deletedBy>DAWNG</deletedBy>
+  </Params>
+</Request>

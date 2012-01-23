@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Default suite]]]">
+  <parameter name="webSite" value="http://aspire.medrium.com:9090"/>
+  <parameter name="browser" value="*chrome"/>
+  <parameter name="seleniumPort" value="5555"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <test name="Default test(failed)(failed)(failed)" preserve-order="false">
+    <parameter name="webSite" value="http://aspire.medrium.com:9090"/>
+    <parameter name="browser" value="*chrome"/>
+    <parameter name="seleniumPort" value="5555"/>
+    <parameter name="seleniumHost" value="localhost"/>
+    <classes>
+      <class name="com.clinical.selenium.section.charts.chartsGeneral.VerifyDisplayOfAge">
+        <methods>
+          <include name="checkAge004" invocation-numbers="0"/>
+          <include name="closeSessions"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,16 @@
+bin/
+# remove maven output files
+target/
+
+## OSX ignore
+.DS_Store
+Icon?
+._*
+
+## Java
+*.class
+
+## Eclipse
+.settings/
+/.classpath
+/.project

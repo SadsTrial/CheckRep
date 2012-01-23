@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AUTOMATIC MATCH - VIEW IN PRESCRIPTION LIST -->
+<Request>
+    <AccountID>-1</AccountID>
+    <UserID>ASP_PARTNER</UserID>
+    <Password>7aka11kILcnz</Password>
+    <SessionType>4</SessionType>
+    <Method>refillRequest</Method>
+    <Params>
+        <RefillRequest>
+            <messageID>7bd7eb470144444a8c0ad15d8d0cb416</messageID>
+            <accountID>20</accountID> 
+            <provID>156</provID>
+            <prescriptionID>5924</prescriptionID> 
+            <pon>20:156:5924</pon> <!-- ACCOUNT:PROVID:PRESCRIPTION -->
+            <!-- CAN CHANGE THE REST TO FIT TEST DATA -->
+            <headerTo>mailto:6407335192001.spi@surescripts.com</headerTo>
+            <headerFrom>mailto:9900010.ncpdp@surescripts.com</headerFrom>
+            <ncpdpid>9900010</ncpdpid>
+            <storename>Drug Mart Xerox</storename>
+            <pharmacistLastName/>
+            <pharmacistFirstName/>
+            <pharmacistMiddleName/>
+            <pharmacistAddr1>255 Leopold St</pharmacistAddr1>
+            <pharmacistAddr2/>
+            <pharmacistCity>Fort Myers</pharmacistCity>
+            <pharmacistState>HI</pharmacistState>
+            <pharmacistZip>967201234</pharmacistZip>
+            <pharmacistEmail/>
+            <pharmacistPhoneNumbers>2393829384:TE#2393829380:FX#</pharmacistPhoneNumbers>
+            <patientFirstName>Felicia</patientFirstName>
+            <patientLastName>Flounders</patientLastName>
+            <patientMiddleName>Felicia</patientMiddleName>
+            <patientSex>F</patientSex>
+            <patientDob>19801101</patientDob>
+            <patientAddr1>6715 Swanson Ave.</patientAddr1>
+            <patientAddr2>Apt 102</patientAddr2>
+            <patientCity>Bethesda</patientCity>
+            <patientState>MD</patientState>
+            <patientZip>20817</patientZip>
+            <patientEmail/>
+            <patientPhoneNumbers>3018620035:TE#3019289283:NP#</patientPhoneNumbers>
+            <prescriberSPI>6407335192001</prescriberSPI>
+            <prescriberFirstName>JOSEPH</prescriberFirstName>
+            <prescriberLastName>DIET</prescriberLastName>
+            <prescriberMiddleName/>
+            <prescriberAddr1>111 ABC ST.</prescriberAddr1>
+            <prescriberAddr2/>
+            <prescriberCity>NOWHERE</prescriberCity>
+            <prescriberState>TX</prescriberState>
+            <prescriberZip>77018</prescriberZip>
+            <prescriberPhoneNumbers>8182223333:TE#8181231234:FX#</prescriberPhoneNumbers>
+            <daysSupply/>
+            <directions>1/2 ML subcutaneous injection after every meal</directions>
+            <drugDBCode/>
+            <dosageForm/>
+            <drugDBCodeQualifier/>
+            <drugDescription>Humalog Pen 100 unit/mL SubQ</drugDescription>
+            <note>This is a note from pharmacist.</note>
+            <productCode>00002872501</productCode>
+            <productCodeQualifier>ND</productCodeQualifier>
+            <quantityQualifier>EA</quantityQualifier>
+            <quantityValue>5.555</quantityValue>
+            <refillsQualifier>R</refillsQualifier>
+            <refillsQuantity>2</refillsQuantity>
+            <rxrefnum>FMEM-999511</rxrefnum>
+            <strength>100</strength>
+            <strengthUnits>ML</strengthUnits>
+            <substitutions>7</substitutions>
+            <lastFillDate>20100525</lastFillDate>
+            <writtenDate>20100101</writtenDate>
+            <payload><![CDATA[<Message><Header><To>mailto:6407335192001.spi@surescripts.com</To><From>mailto:9900010.ncpdp@surescripts.com</From><MessageID>7bd7eb470144444a8c0ad15d8d0cb416</MessageID><SentTime>2011-06-29T19:23:27.4Z</SentTime></Header><Body><RefillRequest><RxReferenceNumber>FMEM-999511</RxReferenceNumber><PrescriberOrderNumber>20:156:2227</PrescriberOrderNumber><Pharmacy><Identification><NCPDPID>9900010</NCPDPID></Identification><StoreName>Drug Mart Xerox</StoreName><Address><AddressLine1>255 Leopold St</AddressLine1><City>Fort Myers</City><State>HI</State><ZipCode>967201234</ZipCode></Address><PhoneNumbers><Phone><Number>2393829384</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>2393829380</Number><Qualifier>FX</Qualifier></Phone></PhoneNumbers></Pharmacy><Prescriber><Identification><SPI>6407335192001</SPI></Identification><Name><LastName>DIET</LastName><FirstName>JOSEPH</FirstName></Name><Address><AddressLine1>111 ABC ST.</AddressLine1><City>SOMEWHERE</City><State>TX</State><ZipCode>77018</ZipCode></Address><PhoneNumbers><Phone><Number>8182223333</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>8181231234</Number><Qualifier>FX</Qualifier></Phone></PhoneNumbers></Prescriber><Patient><Name><LastName>Flounders</LastName><FirstName>Felicia</FirstName><MiddleName>Ann</MiddleName><Prefix>Ms.</Prefix></Name><Gender>F</Gender><DateOfBirth>19801101</DateOfBirth><Address><AddressLine1>6715 Swanson Ave.</AddressLine1><AddressLine2>Apt 102</AddressLine2><City>Bethesda</City><State>MD</State><ZipCode>20817</ZipCode></Address><PhoneNumbers><Phone><Number>3018620035</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>3019289283</Number><Qualifier>NP</Qualifier></Phone></PhoneNumbers></Patient><MedicationPrescribed><DrugDescription>Humalog Pen 100 unit/mL SubQ</DrugDescription><DrugCoded><ProductCode>00002872501</ProductCode><ProductCodeQualifier>ND</ProductCodeQualifier><Strength>100</Strength><StrengthUnits>ML</StrengthUnits></DrugCoded><Quantity><Qualifier>EA</Qualifier><Value>5.555</Value></Quantity><Directions>1/2 ML subcutaneous injection after every meal</Directions><Note>This is a note from pharmacist.</Note><Refills><Qualifier>R</Qualifier><Quantity>0</Quantity></Refills><Substitutions>7</Substitutions><WrittenDate>20100101</WrittenDate><LastFillDate>20100525</LastFillDate></MedicationPrescribed></RefillRequest></Body></Message>]]></payload>
+            <matched>true</matched>
+        </RefillRequest>
+    </Params>
+</Request>

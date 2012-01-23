@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="200129" started-at="2012-01-11T15:39:55Z" finished-at="2012-01-11T15:43:15Z">
+    <groups>
+      <group name="iexplore">
+        <method signature="CreateNewAllergy.createNewAllergyWithEndDate(java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.clinical.selenium.section.charts.Allergy.CreateNewAllergy@8b819f]" name="createNewAllergyWithEndDate" class="com.clinical.selenium.section.charts.Allergy.CreateNewAllergy"/>
+      </group>
+      <group name="default">
+        <method signature="CreateNewAllergy.createNewAllergyWithEndDate(java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.clinical.selenium.section.charts.Allergy.CreateNewAllergy@8b819f]" name="createNewAllergyWithEndDate" class="com.clinical.selenium.section.charts.Allergy.CreateNewAllergy"/>
+      </group>
+      <group name="firefox">
+        <method signature="CreateNewAllergy.createNewAllergyWithEndDate(java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.clinical.selenium.section.charts.Allergy.CreateNewAllergy@8b819f]" name="createNewAllergyWithEndDate" class="com.clinical.selenium.section.charts.Allergy.CreateNewAllergy"/>
+      </group>
+      <group name="safari">
+        <method signature="CreateNewAllergy.createNewAllergyWithEndDate(java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.clinical.selenium.section.charts.Allergy.CreateNewAllergy@8b819f]" name="createNewAllergyWithEndDate" class="com.clinical.selenium.section.charts.Allergy.CreateNewAllergy"/>
+      </group>
+    </groups>
+    <test name="Default test" duration-ms="200129" started-at="2012-01-11T15:39:55Z" finished-at="2012-01-11T15:43:15Z">
+      <class name="com.clinical.selenium.section.charts.Allergy.CreateNewAllergy">
+        <test-method status="PASS" signature="createNewAllergyWithEndDate(java.lang.String, int, java.lang.String, java.lang.String)[pri:0, instance:com.clinical.selenium.section.charts.Allergy.CreateNewAllergy@8b819f]" name="createNewAllergyWithEndDate" duration-ms="200098" started-at="2012-01-11T15:39:55Z" description="Test for Adding New Allergy with End Date" finished-at="2012-01-11T15:43:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[localhost]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[*chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://aspire.medrium.com:9090]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+        <test-method status="PASS" signature="closeSessions()[pri:0, instance:com.clinical.selenium.section.charts.Allergy.CreateNewAllergy@8b819f]" name="closeSessions" is-config="true" duration-ms="407" started-at="2012-01-11T15:43:15Z" finished-at="2012-01-11T15:43:15Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

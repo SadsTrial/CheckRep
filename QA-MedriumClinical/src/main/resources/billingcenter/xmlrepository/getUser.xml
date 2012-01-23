@@ -1,0 +1,8 @@
+<Request>
+  <UserID>DAWNG@MEDRIUM.BPO</UserID>
+  <Password>gri123</Password>
+  <Method>get</Method>
+  <Params>
+    <userName>SAMMY</userName>
+  </Params>
+</Request>

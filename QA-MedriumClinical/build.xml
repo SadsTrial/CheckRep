@@ -1,0 +1,369 @@
+<project name="Selenium Grid Distribution" basedir="." default="run-SingleTest">
+
+  <description>Selenium Grid Distribution</description>
+  	<property file="${basedir}/project.properties"/>
+  	<property name="version" value="SNAPSHOT"/>
+	<property name="artifact" value="Medrium_Clinical"/>
+  	<property name="webSite" value="https://aspire.medrium.com:9093" />
+	<property name="seleniumHost" value="10.10.20.57" />
+	<property name="seleniumPort" value="4444" />
+	<property name="browser" value="*firefox" />
+	<property name="eRxURL" value="http://aspire.medrium.com:9090/xml/SurescriptsClient" />
+	<property name="build.src" value="src"></property>
+	<property name="build.output" value="target"></property>
+
+  <path id="demo.classpath">
+    <fileset dir="${basedir}">
+        <include name="target/lib/*.jar"/>
+    </fileset>
+    <fileset dir="${basedir}/lib">
+      <include name="*.jar"/>
+    </fileset>
+    <pathelement path="${java.class.path}/"/>
+  </path>
+
+	
+	<target name="run-FullTestSuite" depends="jar" description="Run All Selenium tests">
+	    <java classpathref="demo.classpath"
+	        classname="org.testng.TestNG"
+	        failonerror="false"
+	        >
+	      <sysproperty key="java.security.policy" file="${basedir}/lib/testng.policy"/>
+	      <sysproperty key="webSite" value="${webSite}" />
+	      <sysproperty key="seleniumHost" value="${seleniumHost}" />
+	      <sysproperty key="seleniumPort" value="${seleniumPort}" />
+	      <sysproperty key="browser" value="${browser}" />
+	      <sysproperty key="eRxURL" value="${eRxURL}" />
+      	  <arg value="-d" />
+	      <arg value="${basedir}/target/reports" />
+	      <arg value="-suitename" />
+	      <arg value="SeleniumGridDemoInParallel" />
+	    	 <arg value="-parallel"/>
+	    			      <arg value="methods"/>
+		      <arg value="-threadcount"/>
+	      <arg value="34"/>
+  	        <arg value="-testclass"/>
+		    <arg value="com.clinical.selenium.section.appointments.AppointmentsClinical"/>
+		    <arg value="com.clinical.selenium.section.charts.CheckPlusLinks"/>
+		    <arg value="com.clinical.selenium.section.charts.CreateDuplicateVitals"/>
+		    <arg value="com.clinical.selenium.section.charts.CreateNewAdvanceDirectives"/>		    
+		    <arg value="com.clinical.selenium.section.charts.CreateNewAllergy"/>		    
+		    <arg value="com.clinical.selenium.section.charts.CreateNewCondition"/>
+			<arg value="com.clinical.selenium.section.overview.ClinicalsLogin"/>
+		    <arg value="com.clinical.selenium.section.charts.CreateNewImmunization"/>		    
+		    <arg value="com.clinical.selenium.section.charts.CreateNewLabRequest"/>
+		    <arg value="com.clinical.selenium.section.charts.CreateNewMedication"/>		    
+		    <arg value="com.clinical.selenium.section.charts.CreateNewPrescription"/>		    
+		    <arg value="com.clinical.selenium.section.charts.CreateNewReferral"/>
+		    <arg value="com.clinical.selenium.section.charts.CreateNewSocialHistory"/>		    
+		    <arg value="com.clinical.selenium.section.charts.CreateNewVisit"/>
+		    <arg value="com.clinical.selenium.section.charts.CreateNewVitals"/>		   			
+		    <arg value="com.clinical.selenium.section.charts.Prescription_VerifyQuantity"/>		    
+		    <arg value="com.clinical.selenium.section.charts.SearchByKeywords"/>	    
+		    <arg value="com.clinical.selenium.section.charts.SearchForPatient"/>
+		    <arg value="com.clinical.selenium.section.charts.TestMandatoryIcons"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_AdvanceDirective"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Allergy"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Condition"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Immunization"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_LabRequest"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Medication"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Prescription"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Referral"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_SocialHistory"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Visits"/>
+		    <arg value="com.clinical.selenium.section.charts.UnitTest_Vitals"/>
+	    	<arg value="com.clinical.selenium.section.charts.UnitTest_RadiologyOrder"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateAdvanceDirective"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateAllergy"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateCondition"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateImmunization"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateLabRequest"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateMedication"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdatePrescription"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateReferral"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateVisit"/>
+		    <arg value="com.clinical.selenium.section.charts.UpdateVitals"/>
+		    <arg value="com.clinical.selenium.section.charts.VerifyDisplayOfAge"/>
+		    <arg value="com.clinical.selenium.section.charts.VerifyResolvedCondition"/>
+		    <arg value="com.clinical.selenium.section.charts.VerifySmokingValues"/>
+		    <arg value="com.clinical.selenium.section.charts.VisitValidator"/>
+			<arg value="com.clinical.selenium.section.charts.VerifyChartsNumberLinkContent"/>
+			<arg value="com.clinical.selenium.section.charts.VerifySocialHistory"/>						
+			<arg value="com.clinical.selenium.section.charts.VerifyVisitDate"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifyElectronicPrescription"/>
+	    	
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewAdvanceDitrective"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewAllergy"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewCondition"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewImmunization"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewLabRequest"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewMedication"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewPrescription"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewVisit"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewVitals"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateAllergy"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateCondition"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateImmunization"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateLabRequest"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateMedication"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdatePrescription"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateVisit"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateVitals"/>
+	    	
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeleteAllergy"/>
+	        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeleteMedication"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeletePrescription"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeleteVisit"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForupdateAdvanceDirective"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewSocialHistory"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewReferral"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewRadiologyOrder"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateReferral"/>
+	    	<arg value="com.clinical.selenium.section.charts.CreateNewRadiologyOrder"/>	    
+	        <arg value="com.clinical.selenium.section.charts.UpdateRadiologyOrder"/>
+	    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateRadiologyOrder"/>
+	    	
+	    	<arg value="com.clinical.selenium.section.preferences.CreatePreferredDrugList"/>
+	        <arg value="com.clinical.selenium.section.preferences.DeletePreferredDrugList"/>
+	    	<arg value="com.clinical.selenium.section.preferences.UpdatePreferredDrugList"/>
+	    	<arg value="com.clinical.selenium.section.preferences.CreateInteractionWarnings"/>
+        	<arg value="com.clinical.selenium.section.preferences.DeleteInteractionWarnings"/>
+    		<arg value="com.clinical.selenium.section.preferences.EditInteractionWarnings"/>	 
+	    	
+	    	<arg value="com.clinical.selenium.section.charts.CreateDuplicateAllergy"/>	    
+	    	<arg value="com.clinical.selenium.section.charts.CreateDuplicateCondition"/>
+	    	
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForAllergy"/>	    
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForCondition"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForMedication"/>	    
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForPrescription"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForImmunization"/>	    
+	        <arg value="com.clinical.selenium.section.charts.VerifySaveButtonForLabRequest"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForRadiologyOrder"/>	    
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForReferral"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForSocialHistory"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForVisit"/>	    
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForVitals"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForAdvanceDirectives"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerfyVisitSubjectiveCondition"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifyMedicationList"/>
+	    	<arg value="com.clinical.selenium.section.charts.VerifyDrugDrugInteractions"/>
+	    	<arg value="com.clinical.selenium.section.overview.VerifyProviderLocation"/>
+	    		    		        				
+	    	<arg value="com.clinical.selenium.section.ERX.VerifyNewEPrescription"/>
+	    	<arg value="com.clinical.selenium.section.ERX.VerifyUnMatchedRefillRequest"/>
+	    	<arg value="com.clinical.selenium.section.preferences.VerifyClinicalQualityMeasure"/>
+	    	<arg value="com.clinical.selenium.section.preferences.VerifyEditClinicalQualityMeasures"/>
+	    	
+	        	
+	       </java>
+	  </target>
+
+	<target name="run-SingleTest" depends="jar" description="Run Single Selenium test">
+	        <java classpathref="demo.classpath"
+	            classname="org.testng.TestNG"
+	            failonerror="false"
+	            >
+	          <sysproperty key="java.security.policy" file="${basedir}/lib/testng.policy"/>
+	          <sysproperty key="webSite" value="${webSite}" />
+	          <sysproperty key="seleniumHost" value="${seleniumHost}" />
+	          <sysproperty key="seleniumPort" value="${seleniumPort}" />
+	          <sysproperty key="browser" value="${browser}" />
+	          <sysproperty key="eRxURL" value="${eRxURL}" />
+	          <arg value="${basedir}/target/reports" />
+	          <arg value="-suitename" />
+	          <arg value="SeleniumGridDemoInParallel" />
+	          <arg value="-parallel"/>
+	              <arg value="methods"/>
+	          <arg value="-threadcount"/>
+	            <arg value="10"/>
+	          <arg value="-testclass"/>
+	        			    <arg value="com.clinical.selenium.section.appointments.AppointmentsClinical"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CheckPlusLinks"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CreateDuplicateVitals"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewAdvanceDirectives"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewAllergy"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewCondition"/>
+	        				<arg value="com.clinical.selenium.section.overview.ClinicalsLogin"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewImmunization"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewLabRequest"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewMedication"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewPrescription"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewReferral"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewSocialHistory"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewVisit"/>
+	        			    <arg value="com.clinical.selenium.section.charts.CreateNewVitals"/>		   			
+	        			    <arg value="com.clinical.selenium.section.charts.Prescription_VerifyQuantity"/>		    
+	        			    <arg value="com.clinical.selenium.section.charts.SearchByKeywords"/>	    
+	        			    <arg value="com.clinical.selenium.section.charts.SearchForPatient"/>
+	        			    <arg value="com.clinical.selenium.section.charts.TestMandatoryIcons"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_AdvanceDirective"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Allergy"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Condition"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Immunization"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_LabRequest"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Medication"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Prescription"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Referral"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_SocialHistory"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Visits"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UnitTest_Vitals"/>
+	        				<arg value="com.clinical.selenium.section.charts.UnitTest_RadiologyOrder"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateAdvanceDirective"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateAllergy"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateCondition"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateImmunization"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateLabRequest"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateMedication"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdatePrescription"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateReferral"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateVisit"/>
+	        			    <arg value="com.clinical.selenium.section.charts.UpdateVitals"/>
+	        			    <arg value="com.clinical.selenium.section.charts.VerifyDisplayOfAge"/>
+	        			    <arg value="com.clinical.selenium.section.charts.VerifyResolvedCondition"/>
+	        			    <arg value="com.clinical.selenium.section.charts.VerifySmokingValues"/>
+	        			    <arg value="com.clinical.selenium.section.charts.VisitValidator"/>
+	        				<arg value="com.clinical.selenium.section.charts.VerifyChartsNumberLinkContent"/>
+	        				<arg value="com.clinical.selenium.section.charts.VerifySocialHistory"/>						
+	        				<arg value="com.clinical.selenium.section.charts.VerifyVisitDate"/>
+	        	            <arg value="com.clinical.selenium.section.charts.VerifyElectronicPrescription"/>
+	        	            
+	        	
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewAdvanceDitrective"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewAllergy"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewCondition"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewImmunization"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewLabRequest"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewMedication"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewPrescription"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewVisit"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewVitals"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateAllergy"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateCondition"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateImmunization"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateLabRequest"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateMedication"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdatePrescription"/>
+	        	 			<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateVisit"/>
+	        		        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateVitals"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeleteAllergy"/>
+	        		        <arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeleteMedication"/>
+	        		    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeletePrescription"/>
+	        		    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForDeleteVisit"/>
+	        		    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForupdateAdvanceDirective"/>
+	        		    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewSocialHistory"/>
+	        		    	<arg value="com.clinical.selenium.section.charts.CreateNewRadiologyOrder"/>	    
+	        		        <arg value="com.clinical.selenium.section.charts.UpdateRadiologyOrder"/>
+	        	            <arg value="com.clinical.selenium.section.charts.DeleteAllergy"/>	    
+	        		        <arg value="com.clinical.selenium.section.charts.DeleteMedication"/>
+	        		        <arg value="com.clinical.selenium.section.charts.DeletePrescription"/>	    
+      		        		<arg value="com.clinical.selenium.section.charts.DeleteVisit"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewReferral"/>
+	        		    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForNewRadiologyOrder"/>
+	        		    	<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateReferral"/>
+	        				<arg value="com.clinical.selenium.section.audit.VerifyAuditLogForUpdateRadiologyOrder"/>
+	        				
+	        				<arg value="com.clinical.selenium.section.preferences.CreatePreferredDrugList"/>
+	        	        	<arg value="com.clinical.selenium.section.preferences.DeletePreferredDrugList"/>
+	        	    		<arg value="com.clinical.selenium.section.preferences.UpdatePreferredDrugList"/>
+	        				<arg value="com.clinical.selenium.section.preferences.CreateInteractionWarnings"/>
+	        	        	<arg value="com.clinical.selenium.section.preferences.DeleteInteractionWarnings"/>
+	        	    		<arg value="com.clinical.selenium.section.preferences.EditInteractionWarnings"/>	        	
+	        		        
+	        				<arg value="com.clinical.selenium.section.charts.CreateDuplicateAllergy"/>	    
+	        		        <arg value="com.clinical.selenium.section.charts.CreateDuplicateCondition"/>
+	        		        
+	        				<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForAllergy"/>	    
+	        		        <arg value="com.clinical.selenium.section.charts.VerifySaveButtonForCondition"/>
+	        		        <arg value="com.clinical.selenium.section.charts.VerifySaveButtonForMedication"/>	    
+	        	      		<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForPrescription"/>
+	        				<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForImmunization"/>	    
+	        		        <arg value="com.clinical.selenium.section.charts.VerifySaveButtonForLabRequest"/>
+	        		    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForRadiologyOrder"/>	    
+	        		    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForReferral"/>
+	        		    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForSocialHistory"/>
+	        		    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForVisit"/>	    
+	        		    	<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForVitals"/>
+	        				<arg value="com.clinical.selenium.section.charts.VerifySaveButtonForAdvanceDirectives"/>
+	        	            <arg value="com.clinical.selenium.section.charts.VerfyVisitSubjectiveCondition"/>
+	        		    	<arg value="com.clinical.selenium.section.charts.VerifyMedicationList"/>
+	        	            <arg value="com.clinical.selenium.section.charts.VerifyDrugDrugInteractions"/>
+	        		    	<arg value="com.clinical.selenium.section.overview.VerifyProviderLocation"/>
+	        	
+	        	            <arg value="com.clinical.selenium.section.ERX.VerifyNewEPrescription"/>
+	        		    	<arg value="com.clinical.selenium.section.ERX.VerifyUnMatchedRefillRequest"/>
+	        	            <arg value="com.clinical.selenium.section.preferences.VerifyClinicalQualityMeasure"/>
+	        		    	<arg value="com.clinical.selenium.section.preferences.VerifyEditClinicalQualityMeasures"/>
+	        		    	
+	        	
+	        </java>
+	      </target>
+
+		
+	<target name="reports">
+	  <junitreport todir="${basedir}/target/reports">
+	    <fileset dir="${basedir}/target/reports">
+	      <include name="*/*.xml"/>
+	    </fileset>
+	    <report format="noframes"  todir="${basedir}/target/reports/junit"/>
+	  </junitreport>
+	</target>
+
+	
+	<path id="compile.classpath">
+    <fileset dir="lib">
+      <include name="*.jar"/>       
+    </fileset>
+	<pathelement path="${java.class.path}/"/>
+  </path>
+
+	<target name="clean" description="Remove generated artifacts">
+        <delete dir="${build.output}"/>
+        <delete dir="${build.output}/reports/javadoc"/>
+	 </target>
+	
+  	  <target name="compile" depends="clean" description="compile the source " >
+  	    <mkdir dir="${build.output}"/>
+  	    <javac srcdir="${build.src}"
+  	           destdir="${build.output}"
+  	           debug="true"
+  	           source="1.5"
+  	           target="1.5">
+  	      <classpath refid="compile.classpath"/>
+  	    </javac>
+  	    <copy todir="${build.output}" verbose="true">
+  	       <fileset dir="${build.src}" includes="bin/*"/>
+  	    </copy>
+  	  </target>
+
+         <target name="jar" depends="compile" description="Package as a jar">
+  	      <mkdir dir="${build.output}/lib"/>
+  	      <jar jarfile="${build.output}/lib/${artifact}-${version}.jar" basedir="${build.output}">
+	  	      <fileset dir="${build.src}" includes="**/*.xls"/>
+  	        <manifest>
+  	          <attribute name="Built-By" value="Medrium"/>
+  	          <attribute name="Build-Time" value="${DSTAMP}${TSTAMP}"/>
+  	          <section name="common">
+  	            <attribute name="Specification-Title" value="Medrium"/>
+  	            <attribute name="Specification-Version" value="${version}"/>
+  	            <attribute name="Specification-Vendor" value="Medrium.com"/>
+  	          </section>
+  	        </manifest>
+  	      </jar>
+  	    </target>
+	
+	<target name="javadoc">
+	   <mkdir dir="${build.output}/reports/javadoc"/>
+	   <javadoc packagenames="com.*"
+	            sourcepath="src"
+	            destdir="${build.output}/reports/javadoc"
+	            classpathref="demo.classpath"
+	            author="true"
+	            version="true"
+	            use="true"
+	            windowtitle="Medrium Clinical Test API"
+	            doctitle="&lt;h1&gt;Medrium Clinical Test&lt;/h1&gt;"
+	   />
+	</target>
+</project>

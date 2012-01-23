@@ -1,0 +1,55 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Medrium Selenium Automated QA Test">
+  <parameter name="webSite" value="http://aspire.medrium.com:9090" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="5555" />
+  <parameter name="eRxURL" value="http://aspire.medrium.com:9090/xml/SurescriptsClient" />
+  <parameter name="browser" value="*chrome" />
+  <test name="MacTest" junit="false" annotations="JDK" parallel="methods" thread-count="10">
+    
+    <packages>
+      <package name="com.clinical.selenium.section.charts.Allergy"/>
+      <package name="com.clinical.selenium.section.charts.chartsGeneral"/>
+      <package name="com.clinical.selenium.section.charts.condition"/>
+      <package name="com.clinical.selenium.section.charts.directives"/>
+      <package name="com.clinical.selenium.section.charts.immunization"/>
+      <package name="com.clinical.selenium.section.charts.labRequest"/>
+      <package name="com.clinical.selenium.section.charts.medication"/>
+      <package name="com.clinical.selenium.section.charts.prescription"/>
+      <package name="com.clinical.selenium.section.charts.radiologyOrder"/>
+      <package name="com.clinical.selenium.section.charts.referral"/>
+      <package name="com.clinical.selenium.section.charts.socialHistory"/>
+      <package name="com.clinical.selenium.section.charts.Visit"/>
+      <package name="com.clinical.selenium.section.charts.vitals"/>
+      <package name="com.clinical.selenium.section.audit"/>
+      <package name="com.clinical.selenium.section.appointments"/>
+      <package name="com.clinical.selenium.section.overview"/>
+      <package name="com.clinical.selenium.section.preferences"/>
+      <package name="com.clinical.selenium.section.tasks"/>
+    </packages>
+  </test>
+  
+  <test name="WindowsTest" junit="false" annotations="JDK" parallel="methods" thread-count="10">
+    <packages>
+      <package name="com.clinical.selenium.section.charts.Allergy"/>
+      <package name="com.clinical.selenium.section.charts.chartsGeneral"/>
+      <package name="com.clinical.selenium.section.charts.condition"/>
+      <package name="com.clinical.selenium.section.charts.directives"/>
+      <package name="com.clinical.selenium.section.charts.immunization"/>
+      <package name="com.clinical.selenium.section.charts.labRequest"/>
+      <package name="com.clinical.selenium.section.charts.medication"/>
+      <package name="com.clinical.selenium.section.charts.prescription"/>
+      <package name="com.clinical.selenium.section.charts.radiologyOrder"/>
+      <package name="com.clinical.selenium.section.charts.referral"/>
+      <package name="com.clinical.selenium.section.charts.socialHistory"/>
+      <package name="com.clinical.selenium.section.charts.Visit"/>
+      <package name="com.clinical.selenium.section.charts.vitals"/>
+      <package name="com.clinical.selenium.section.audit"/>
+      <package name="com.clinical.selenium.section.appointments"/>
+      <package name="com.clinical.selenium.section.overview"/>
+      <package name="com.clinical.selenium.section.preferences"/>
+      <package name="com.clinical.selenium.section.tasks"/>
+    </packages>
+  </test>
+  
+</suite>

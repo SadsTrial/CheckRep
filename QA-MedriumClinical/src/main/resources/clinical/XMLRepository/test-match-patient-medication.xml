@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MATCH PATIENT + MEDICATION (NOT AUTOMATICALLY MATCHED) -->
+<Request>
+    <AccountID>-1</AccountID>
+    <UserID>ASP_PARTNER</UserID>
+    <Password>7aka11kILcnz</Password>
+    <SessionType>4</SessionType>
+    <Method>refillRequest</Method>
+    <Params>
+        <RefillRequest>
+            <messageID>f914b694553a4affa47e803f3d759ae1</messageID>
+            <accountID>-1</accountID>
+            <provID>-1</provID>
+            <prescriptionID>-1</prescriptionID>
+            <pon>85C2469DBE3F646988257202006BDAE0</pon>
+            <headerTo>mailto:6407335192001.spi@surescripts.com</headerTo>
+            <headerFrom>mailto:9900010.ncpdp@surescripts.com</headerFrom>
+            <ncpdpid>9900010</ncpdpid>
+            <storename>Drug Mart Xerox</storename>
+            <pharmacistLastName>WeLoveDrugsBernardJDunnRxSchool</pharmacistLastName>
+            <pharmacistFirstName>AmitabhBachhanKishoreKumarRoy</pharmacistFirstName>
+            <pharmacistMiddleName>PhysicianPrescriberPatientAdvisor</pharmacistMiddleName>
+            <pharmacistAddr1>255 Leopold St</pharmacistAddr1>
+            <pharmacistAddr2>Off St. Patricks Highway</pharmacistAddr2>
+            <pharmacistCity>Fort Myers</pharmacistCity>
+            <pharmacistState>HI</pharmacistState>
+            <pharmacistZip>967201234</pharmacistZip>
+            <pharmacistEmail>AjitDKathleenWeigang@georgetown.edu</pharmacistEmail>
+            <pharmacistPhoneNumbers>2393829384:TE#2393829380:FX#7039212149:TE#7033455349:TE#7033334954:TE#7033474747:TE#7033474749:TE#</pharmacistPhoneNumbers>
+            <patientFirstName>Debra</patientFirstName>
+            <patientLastName>Tucker</patientLastName>
+            <patientMiddleName>Debra</patientMiddleName>
+            <patientSex>F</patientSex>
+            <patientDob>19700101</patientDob>
+            <patientAddr1>8331 Everwood Dr. Apt 342</patientAddr1>
+            <patientAddr2/>
+            <patientCity>Cleveland</patientCity>
+            <patientState>OH</patientState>
+            <patientZip>44103</patientZip>
+            <patientEmail/>
+            <patientPhoneNumbers>4408450398:TE#</patientPhoneNumbers>
+            <prescriberSPI>6407335192001</prescriberSPI>
+            <prescriberFirstName>JOSEPH</prescriberFirstName>
+            <prescriberLastName>DIET</prescriberLastName>
+            <prescriberMiddleName>G.</prescriberMiddleName>
+            <prescriberAddr1>111 ABC ST.</prescriberAddr1>
+            <prescriberAddr2/>
+            <prescriberCity>SOMEWHERE</prescriberCity>
+            <prescriberState>TX</prescriberState>
+            <prescriberZip>77018</prescriberZip>
+            <prescriberPhoneNumbers>8182223333:TE#8181231234:FX#</prescriberPhoneNumbers>
+            <daysSupply>30</daysSupply>
+            <directions>Take 2.0 Units Once a Day As Directed</directions>
+            <drugDBCode/>
+            <dosageForm>61</dosageForm>
+            <drugDBCodeQualifier/>
+            <drugDescription>Paxil ( 10mg/5ml, Suspension, Oral )</drugDescription>
+            <note>Please ask patient not to take more than Paxil 10 mg/5 mL Oral suspension (Liquid) at one time</note>
+            <productCode></productCode>
+            <productCodeQualifier></productCodeQualifier>
+            <quantityQualifier>UN</quantityQualifier>
+            <quantityValue>60.5</quantityValue>
+            <refillsQualifier>R</refillsQualifier>
+            <refillsQuantity>2</refillsQuantity>
+            <rxrefnum>SJP1027080633</rxrefnum>
+            <strength>10MG/5ML</strength>
+            <strengthUnits/>
+            <substitutions>0</substitutions>
+            <lastFillDate/>
+            <writtenDate>20110407</writtenDate>
+            <payload><![CDATA[<Message><Header><To>mailto:6407335192001.spi@surescripts.com</To><From>mailto:9900010.ncpdp@surescripts.com</From><MessageID>f914b694553a4affa47e803f3d759ae1</MessageID><SentTime>2011-07-11T13:47:37.5Z</SentTime></Header><Body><RefillRequest><RxReferenceNumber>SJP1027080633</RxReferenceNumber><PrescriberOrderNumber>85C2469DBE3F646988257202006BDAE0</PrescriberOrderNumber><Pharmacy><Identification><NCPDPID>9900010</NCPDPID></Identification><StoreName>Drug Mart Xerox</StoreName><Pharmacist><LastName>WeLoveDrugsBernardJDunnRxSchool</LastName><FirstName>AmitabhBachhanKishoreKumarRoy</FirstName><MiddleName>PhysicianPrescriberPatientAdvisor</MiddleName><Suffix>PharmD,MBA</Suffix><Prefix>Senior</Prefix></Pharmacist><PharmacistAgent><LastName>WehateDrugsJohnsonJDunnRxSchool</LastName><FirstName>RandhirKapoorKKishoreKumarRoy</FirstName><MiddleName>WannaBePrescriberPatientAdvisor</MiddleName><Suffix>CPhT</Suffix><Prefix>Junior</Prefix></PharmacistAgent><Address><AddressLine1>255 Leopold St</AddressLine1><AddressLine2>Off St. Patricks Highway</AddressLine2><City>Fort Myers</City><State>HI</State><ZipCode>967201234</ZipCode></Address><Email>AjitDKathleenWeigang@georgetown.edu</Email><PhoneNumbers><Phone><Number>2393829384</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>2393829380</Number><Qualifier>FX</Qualifier></Phone><Phone><Number>7039212149</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>7033455349</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>7033334954</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>7033474747</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>7033474749</Number><Qualifier>TE</Qualifier></Phone></PhoneNumbers></Pharmacy><Prescriber><Identification><SPI>6407335192001</SPI></Identification><Name><LastName>DIET</LastName><FirstName>JOSEPH</FirstName><MiddleName>G.</MiddleName><Suffix>M.D.</Suffix><Prefix>Dr</Prefix></Name><Address><AddressLine1>111 ABC ST.</AddressLine1><City>SOMEWHERE</City><State>TX</State><ZipCode>77018</ZipCode></Address><PhoneNumbers><Phone><Number>8182223333</Number><Qualifier>TE</Qualifier></Phone><Phone><Number>8181231234</Number><Qualifier>FX</Qualifier></Phone></PhoneNumbers></Prescriber><Patient><Name><LastName>Tucker</LastName><FirstName>Debra</FirstName></Name><Gender>F</Gender><DateOfBirth>19700101</DateOfBirth><Address><AddressLine1>8331 Everwood Dr. Apt 342</AddressLine1><City>Cleveland</City><State>OH</State><ZipCode>44103</ZipCode></Address><PhoneNumbers><Phone><Number>4408450398</Number><Qualifier>TE</Qualifier></Phone></PhoneNumbers></Patient><MedicationPrescribed><DrugDescription>Paxil ( 10mg/5ml, Suspension, Oral )</DrugDescription><DrugCoded><DosageForm>61</DosageForm><Strength>10MG/5ML</Strength></DrugCoded><Quantity><Qualifier>UN</Qualifier><Value>60.0</Value></Quantity><DaysSupply>30</DaysSupply><Directions>Take 2.0 Units Once a Day As Directed</Directions><Note>Please ask patient not to take more than Paxil 10 mg/5 mL Oral suspension (Liquid) at one time</Note><Refills><Qualifier>R</Qualifier><Quantity>2</Quantity></Refills><Substitutions>0</Substitutions><WrittenDate>20110407</WrittenDate></MedicationPrescribed></RefillRequest></Body></Message>]]></payload>
+            <matched>false</matched>
+        </RefillRequest>
+    </Params>
+</Request>
+
